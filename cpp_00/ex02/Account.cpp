@@ -56,8 +56,14 @@ void Account::displayAccountsInfos(void) {
 }
 
 void Account::_displayTimestamp(void) {
-	std::cout << "[19920104_091532] ";
-	// TODO
+	// std::cout << "[19920104_091532] ";
+
+	time_t timestamp = time(NULL);
+	struct tm datetime = *localtime(&timestamp);
+	char formated[16];
+
+	strftime(formated, 16, "%Y%m%d_%H%M%S", &datetime);
+	std::cout << "[" << formated << "] ";
 }
 
 // non static
