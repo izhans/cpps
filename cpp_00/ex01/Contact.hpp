@@ -17,6 +17,7 @@ public:
 			std::string phoneNumber, std::string darkestSecret);
 	~Contact();
 
+	void showFullInfo();
 	std::string getFirstName();
 	std::string getLastName();
 	std::string getNickname();

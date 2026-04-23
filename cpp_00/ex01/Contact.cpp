@@ -21,6 +21,15 @@ Contact::Contact(std::string firstName, std::string lastName, std::string nickna
 
 Contact::~Contact() {}
 
+void Contact::showFullInfo()
+{
+	std::cout << "First Name: " << _firstName << std::endl;
+	std::cout << "Last Name: " << _lastName << std::endl;
+	std::cout << "Nickname: " << _nickname << std::endl;
+	std::cout << "Phone Number: " << _phoneNumber << std::endl;
+	std::cout << "Darkest Secret: " << _darkestSecret << std::endl;
+}
+
 std::string Contact::getFirstName()
 {
 	return this->_firstName;

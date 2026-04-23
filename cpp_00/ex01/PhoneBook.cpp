@@ -9,7 +9,7 @@ PhoneBook::PhoneBook()
 	this->_next = 0;
 }
 
-PhoneBook::~PhoneBook() {} // TODO ?
+PhoneBook::~PhoneBook() {}
 
 void PhoneBook::addContact(Contact contact)
 {
@@ -53,14 +53,7 @@ static void print_atrib(std::string str)
 void PhoneBook::listContact(int index)
 {
 	if (index < _next)
-	{
-		Contact c = _contacts[index];
-		std::cout << "First Name: " << c.getFirstName() << std::endl;
-		std::cout << "Last Name: " << c.getLastName() << std::endl;
-		std::cout << "Nickname: " << c.getNickname() << std::endl;
-		std::cout << "Phone Number: " << c.getPhoneNumber() << std::endl;
-		std::cout << "Darkest Secret: " << c.getDarkestSecret() << std::endl;
-	}
+		_contacts[index].showFullInfo();
 	else
 		std::cout << "Contact cannot be found" << std::endl;
 }
