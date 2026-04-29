@@ -6,11 +6,20 @@
 class Harl
 {
 	private :
-		static const int N_LEVELS = 4;
+		enum Level {
+			DEBUG,
+			INFO,
+			WARNING,
+			ERROR,
+			UNKNOWN
+		};
+
 		void debug( void );
 		void info( void );
 		void warning( void );
 		void error( void );
+		
+		Level getLevel(std::string level);
 	public :
 		Harl(void);
 		~Harl(void);
