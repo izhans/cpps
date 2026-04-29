@@ -12,5 +12,4 @@ int main()
 	}
 	std::cout << "Horde has passed" << std::endl;
 	delete[] horde;
-	return 0;
 }
