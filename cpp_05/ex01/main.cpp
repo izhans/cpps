@@ -84,7 +84,7 @@ int main()
 
 	try
 	{
-		Bureaucrat alice("Alice", 25);
+		const Bureaucrat alice("Alice", 25);
 		Form form("Contract", 50, 100);
 
 		std::cout << "Before: " << form << std::endl;

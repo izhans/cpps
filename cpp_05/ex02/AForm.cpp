@@ -44,7 +44,12 @@ int AForm::getExecGrade() const
 	return _execGrade;
 }
 
-void AForm::beSigned(Bureaucrat &b)
+std::string AForm::getTarget() const
+{
+	return _target;
+}
+
+void AForm::beSigned(const Bureaucrat &b)
 {
 	if (b.getGrade() > _signGrade)
 		throw AForm::GradeTooLowException();
@@ -60,6 +65,11 @@ const char *AForm::GradeTooHighException::what() const throw()
 const char *AForm::GradeTooLowException::what() const throw()
 {
 	return "Grade too low";
+}
+
+const char *AForm::FormNotSignedException::what() const throw()
+{
+	return "Form not signed";
 }
 
 std::ostream &operator<<(std::ostream &out, const AForm &f)

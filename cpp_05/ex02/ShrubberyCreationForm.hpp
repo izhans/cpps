@@ -2,17 +2,18 @@
 # define SHURBERRYCREATIONFORM_HPP
 
 # include "AForm.hpp"
+# include "Bureaucrat.hpp"
 
 class ShrubberyCreationForm: public AForm
 {
-	private:
-		std::string _target; // ? aqui o protected en AForm ???
 	public:
 		ShrubberyCreationForm();
-		ShrubberyCreationForm(std::string name, std::string target);
+		ShrubberyCreationForm(std::string target);
 		~ShrubberyCreationForm();
 		ShrubberyCreationForm(const ShrubberyCreationForm &other);
 		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &other);
+
+		void execute(Bureaucrat const &executor) const;
 };
 
 #endif
