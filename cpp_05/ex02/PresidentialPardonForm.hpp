@@ -2,7 +2,6 @@
 # define PRESIDENTIALPARDONFORM_HPP
 
 # include "AForm.hpp"
-# include "Bureaucrat.hpp"
 
 class PresidentialPardonForm: public AForm
 {
@@ -13,7 +12,7 @@ class PresidentialPardonForm: public AForm
 		PresidentialPardonForm(const PresidentialPardonForm &other);
 		PresidentialPardonForm &operator=(const PresidentialPardonForm &other);
 
-		void execute(Bureaucrat const &executor) const;
+		void performAction() const;
 };
 
 #endif

@@ -2,7 +2,6 @@
 # define SHURBERRYCREATIONFORM_HPP
 
 # include "AForm.hpp"
-# include "Bureaucrat.hpp"
 
 class ShrubberyCreationForm: public AForm
 {
@@ -13,7 +12,7 @@ class ShrubberyCreationForm: public AForm
 		ShrubberyCreationForm(const ShrubberyCreationForm &other);
 		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &other);
 
-		void execute(Bureaucrat const &executor) const;
+		void performAction() const;
 };
 
 #endif

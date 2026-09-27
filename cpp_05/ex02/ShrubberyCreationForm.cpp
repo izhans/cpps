@@ -19,13 +19,8 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationF
 	return *this;
 }
 
-void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
+void ShrubberyCreationForm::performAction() const
 {
-	if (!isSigned())
-		throw AForm::FormNotSignedException();
-	if (executor.getGrade() > getExecGrade())
-		throw AForm::GradeTooLowException();
-
 	std::ofstream file((getTarget() + "_shrubbery").c_str());
 
 	if (!file.is_open())
