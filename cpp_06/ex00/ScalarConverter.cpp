@@ -3,6 +3,7 @@
 #include <cctype>
 #include <cstdlib>
 #include <cmath>
+#include <cerrno>
 
 static bool isSpecial(const std::string &literal);
 static double getSpecialValue(const std::string &literal);
@@ -22,8 +23,6 @@ static void printDecimal(double value);
  */
 void ScalarConverter::convert(const std::string &literal)
 {
-    std::cout << literal << std::endl;
-
 	if (literal.empty())
 		return;
 
