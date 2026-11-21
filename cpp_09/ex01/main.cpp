@@ -9,8 +9,14 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 
-	RPN rpn;
-	rpn.process(argv[1]);
+	try
+	{
+		RPN::process(argv[1]);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << "Error: " << e.what() << std::endl;
+	}
 	
 	return 0;
 }

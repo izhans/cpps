@@ -2,10 +2,11 @@
 
 class RPN
 {
-	public:
+	private:
 		RPN();
 		~RPN();
-		// TODO OCF
-
-		void process(std::string expression);
+		RPN(const RPN &other);
+		RPN &operator=(const RPN &other);
+	public:
+		static void process(std::string expression);
 };
