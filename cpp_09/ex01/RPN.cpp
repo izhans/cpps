@@ -1,4 +1,6 @@
 #include "RPN.hpp"
+#include <stack>
+
 
 static int operate(int a, int b, char op);
 static bool hasValidFormat(std::string &expression);

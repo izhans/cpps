@@ -5,9 +5,12 @@ class BitcoinExchange
 {
 	private:
 		std::map<std::string, double> _db;
-		void initializeDB();
-	public:
+		// OFC
 		BitcoinExchange();
 		~BitcoinExchange();
-		// TODO OCF
+		BitcoinExchange(const BitcoinExchange &other);
+		BitcoinExchange &operator=(const BitcoinExchange &other);
+	public:
+		static void initDB();
+		static void process(std::string input);
 };

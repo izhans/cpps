@@ -9,5 +9,8 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 	
+	BitcoinExchange::initDB();
+	BitcoinExchange::process(argv[1]);
+
 	return 0;
 }
