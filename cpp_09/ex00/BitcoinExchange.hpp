@@ -1,16 +1,17 @@
 #include <map>
 #include <iostream>
+#include <string>
 
 class BitcoinExchange
 {
 	private:
-		std::map<std::string, double> _db;
+		static std::map<std::string, double> _db;
 		// OFC
 		BitcoinExchange();
 		~BitcoinExchange();
 		BitcoinExchange(const BitcoinExchange &other);
 		BitcoinExchange &operator=(const BitcoinExchange &other);
 	public:
-		static void initDB();
+		static bool initDB();
 		static void process(std::string input);
 };
