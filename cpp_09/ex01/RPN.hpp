@@ -1,4 +1,7 @@
-#include <iostream>
+#ifndef RPN_HPP
+# define RPN_HPP
+
+# include <iostream>
 
 class RPN
 {
@@ -10,3 +13,5 @@ class RPN
 	public:
 		static void process(std::string expression);
 };
+
+#endif

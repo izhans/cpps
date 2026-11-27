@@ -1,6 +1,9 @@
-#include <map>
-#include <iostream>
-#include <string>
+#ifndef BITCOIN_EXCHANGE_HPP
+# define BITCOIN_EXCHANGE_HPP
+
+# include <map>
+# include <iostream>
+# include <string>
 
 class BitcoinExchange
 {
@@ -15,3 +18,5 @@ class BitcoinExchange
 		static bool initDB();
 		static void process(std::string input);
 };
+
+#endif

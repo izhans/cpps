@@ -5,7 +5,7 @@ int main(int argc, char *argv[])
 {
 	if (argc != 2)
 	{
-		std::cout << "Use: ./btc <input_file>" << std::endl;
+		std::cerr << "Use: ./btc <input_file>" << std::endl;
 		return 1;
 	}
 	

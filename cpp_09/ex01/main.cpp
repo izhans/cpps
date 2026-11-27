@@ -5,7 +5,7 @@ int main(int argc, char *argv[])
 {
 	if (argc != 2)
 	{
-		std::cout << "Use: ./RPN \"<expression>\"" << std::endl;
+		std::cerr << "Use: ./RPN \"<expression>\"" << std::endl;
 		return 1;
 	}
 
